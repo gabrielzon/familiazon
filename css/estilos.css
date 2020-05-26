@@ -1,0 +1,290 @@
+/*soft-reset do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../img/fundo-fotografico-em-tecido-textura-vermelha-2-60x1-50-painel-sublimado.jpg');
+  background-size: auto 100vh;
+  font-family: 'Patrick Hand', cursive;
+  height: 100vh; 
+  font-size: 10px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+header {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menu{
+  background-color: white;
+  position: fixed; 
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none; 
+}
+
+.menu a {
+  display: block;
+  padding: 5px 20px;
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: orange;
+  color: white
+}
+
+
+li a {
+  color: orange; 
+  text-decoration: none; 
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+.legend {
+  color: black;
+  text-decoration: none;
+}
+
+.titulo {
+  transform:scale(0.2) translateY(30vh);
+  opacity: 0; 
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+/*Não é necessário colocar a animação de 0%, pois já é considerado a personalização acima*/
+
+@keyframes animacaoTitulo {
+  100% {
+    transform:scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Inconsolata', monospace;
+}
+
+.site-subtitle {
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
+}
+
+/*Entra no site font_awesome para procurar links de icones, você deve pegar também o código da sua conta criada no mesmo em "Your Kits" */
+
+.sobre,
+.contato,
+.anexos {
+  padding: 2em;
+  min-height: 100vh;
+  justify-content: space-around;
+  margin-top: 50px 
+}
+
+@media (min-widht: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+.sobre h2,
+.contato h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: azure;
+  margin-bottom: 1em;
+}
+
+.anexos h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: azure;
+  margin-bottom: 3.5em;
+}
+
+.sobre p {
+  color: azure;
+  margin-bottom: 0.5em;
+  text-indent: 1.5em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: orange;
+  text-decoration: underline;
+}
+
+.sobre a:hover {
+  background-color: white;
+  text-decoration: none;
+  color: red;
+}
+
+.sobre .avatar {
+  margin-left: 2em;
+}
+
+/*clip-path é um comando que possibilita o corte de um elemento de acordo com uma figura geométrica qualquer a sua escolha. O "polygon()" deve ser usado de acordo a uma função e por isso deve ser posto coordenadas*/
+
+/*Site para pesquisar coordenadas de figuras do clip path: https://bennettfeely.com/clippy/ */
+
+/*Pesquisar mask de CSS, diferente do clip-path esse comando não corta*/
+
+/*Site "Can I use" mostra comandos que podemos utilizar*/
+
+.sobre .avatar img {
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar {
+    float: right;
+  }
+}
+
+@media (min-widht: 300px) {
+  .sobre .avatar {
+    scale: .5;
+    text-align: center;
+
+    max-width: 600px;
+  }
+}
+
+.anexos .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .anexos .grid {
+  grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .anexos .grid {
+  grid-template-columns: repeat(3, 260px);
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 4em - 48px - 1em);
+  }
+}
+
+.anexos figure {
+  text-align: center;
+}
+
+.img-anexos {
+  height: 180px;
+  width: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20%;
+  transition: transform 500ms;
+}
+
+/*Vale lembrar q o "transform" possui diversas opções de animações para colocar em seu site*/
+
+.img-anexos:hover {
+  transform: scale(1.1);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+/*Para procurar sobre cores utilizadas no CSS, pode acessar o MDN color picker tool*/
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px orangered;
+}
+
+.contato .avatar {
+  margin-right: 2em;
+}
+
+.contato .avatar img {
+  border-radius: 50%
+}
+
+@media (min-width: 600px) {
+  .contato .avatar {
+    float: left;
+  }
+}
+
+@media (min-widht: 300px) {
+  .contato .avatar {
+    scale: .5;
+    text-align: center;
+
+    max-width: 600px;
+  }
+}
+
+/*Para melhores modificações usar JavaScript*/
+
+/*Explorar sobre SVG e CSS-doodle*/
+
+/*Direitos autorais/imagens:
+digital= "<a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo vetor criado por freepik - br.freepik.com</a>"
+arvore= "<a href="https://pt.vecteezy.com/vetor-gratis/ramo">Ramo Vetores por Vecteezy</a>"
+info= "https://pixabay.com/pt/service/license/"*/

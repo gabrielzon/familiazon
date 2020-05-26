@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Família Zon</title>
-  <link rel="stylesheet" href="CSS/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Patrick+Hand&family=Roboto&display=swap"
     rel="stylesheet">
-
+    <meta property= 'og:url' content="https://gabrielzon.github.io/familiazon/"/>
   <script src="https://kit.fontawesome.com/720acb0269.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-  <header>
+  <header id="inicio">
     <nav class="menu">
       <ul>
-        <li><a href="#home">
+        <li><a href="#inicio">
               <i class="fas fa-home"></i>
         </a></li>
         <li><a href="#sobre">Sobre</a></li>
@@ -30,9 +30,6 @@
       <h2 class="site-subtitle">Gabriel Zon é o web developer</h2>
     </div>
   </header>
-  <section class="home container" id="home">
-    
-  </section>
   <section class="sobre container" id="sobre">
   <h2>Sobre</h2>
 
@@ -55,17 +52,18 @@
   <p>
     Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>
   </p>
-</section>
+  </section>
   <section class="anexos container" id="anexos">
     <h2>Anexos</h2>
 
     <div class="grid">
+        <a class="page" href="detalhe1.html">
+          <figure>
+            <img class="img-anexos" src="./img/fundo-de-impressao-digital-de-neon-azul_23-2148367631.jpg" alt="História de Nomes e Sobrenomes">
+            <figcaption class="legend">História de Nomes e Sobrenomes</figcaption>
+          </figure>
+        </a>
       
-      <figure>
-        <img class="img-anexos" src="./img/fundo-de-impressao-digital-de-neon-azul_23-2148367631.jpg" alt="História de Nomes e Sobrenomes">
-        <figcaption>História de Nomes e Sobrenomes</figcaption>
-      </figure>
-
       <figure>
         <img class="img-anexos" src="./img/TESTE 3.png" alt="Origem e Significado de 'Zon'">
           <figcaption>Origem e Significado de "Zon"</figcaption>
@@ -97,8 +95,8 @@
       </figure>
 
       <figure>
-        <img class="img-anexos" src="./img/TESTE 3.png" alt="Outros Membros Contribuintes">
-        <figcaption>Outros Membros Contribuintes</figcaption>
+        <img class="img-anexos" src="./img/TESTE 3.png" alt="Homenagens">
+        <figcaption>Homenagens</figcaption>
       </figure>
 
       <figure>
@@ -110,20 +108,25 @@
   </section>
   <section class="contato container" id="contato">
     <h2>Contato</h2>
-    <div class="grid icons">
-      <a target="_blank" href="https://github.com/ZoonG2808">
-        <i class="fab fa-github"></i>
-      </a>
-      <a target="_blank" href="https://twitter.com/gabriel_zon">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a target="_blank" href="https://www.instagram.com/gabrielz27/">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="gabriel.zon.gz@gmail.com.br">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
+    <figure class="avatar">
+      <img src="https://pbs.twimg.com/profile_images/1248736485723037701/_1Fckmq7_400x400.jpg" alt="Gabriel Zon">
+    </figure>
+    <li>
+      <div class="grid icons">
+        <a target="_blank" href="https://github.com/gabrielzon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="https://www.facebook.com/gabriel.zon.1/">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/gabrielz27/">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto: gabriel.zon.gz@gmail.com.br">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </li>
   </section>
 </body>
 
